@@ -1,0 +1,64 @@
+body {
+    background-color: black;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.neon-text {
+    font-size: 96px; /* Размер для десктопа */
+    white-space: nowrap;
+    animation: glow 2.5s infinite alternate;
+}
+
+.letter {
+    display: inline-block;
+    opacity: 0;
+}
+
+@keyframes draw {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 
+            0 0 5px #ff0000,
+            0 0 10px #ff0000,
+            0 0 15px #ff0000;
+        color: #ffffff;
+    }
+    50% {
+        text-shadow: 
+            0 0 5px #ff69b4,
+            0 0 10px #ff69b4,
+            0 0 15px #ff69b4;
+        color: #ffffff;
+    }
+    100% {
+        text-shadow: 
+            0 0 5px #800080,
+            0 0 10px #800080,
+            0 0 15px #800080;
+        color: #ffffff;
+    }
+}
+
+/* Оптимизация для мобильных устройств */
+@media (max-width: 768px) {
+    .neon-text {
+        font-size: 48px; /* Уменьшаем размер текста для мобильных устройств */
+    }
+}
+
+@media (max-width: 576px) {
+    .neon-text {
+        font-size: 36px; /* Еще меньше для самых маленьких экранов */
+    }
+}
