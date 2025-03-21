@@ -1,4 +1,4 @@
-const text = "everysoularemine❤";
+const text = "С днём рождения!❤";
 const neonText = document.getElementById("neon-text");
 
 text.split('').forEach((char, index) => {
